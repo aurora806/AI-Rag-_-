@@ -1,0 +1,56 @@
+2026-04-06 11:00:47,593 - agent - ERROR - file_handler.py:42 - [listdir_with_allowed_type]data不是文件夹
+2026-04-06 11:00:47,595 - agent - ERROR - file_handler.py:10 - [md5计算]文件txt不存在
+2026-04-06 11:00:47,595 - agent - ERROR - vector_store.py:99 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\anaconda\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-06 11:00:47,596 - agent - ERROR - file_handler.py:10 - [md5计算]文件pdf不存在
+2026-04-06 11:00:47,596 - agent - ERROR - vector_store.py:99 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath,passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\anaconda\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-06 11:21:16,928 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫地机器人100问.pdf内容加载成功
+2026-04-06 11:21:22,790 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫地机器人100问.txt内容加载成功
+2026-04-06 11:21:29,602 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-06 11:21:31,505 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\故障排除.txt内容加载成功
+2026-04-06 11:21:32,519 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\维护保养.txt内容加载成功
+2026-04-06 11:21:33,376 - agent - INFO - vector_store.py:97 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\选购指南.txt内容加载成功
+2026-04-06 11:23:05,466 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫地机器人100问.pdf内容已经存在知识库中，跳过
+2026-04-06 11:23:05,466 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫地机器人100问.txt内容已经存在知识库中，跳过
+2026-04-06 11:23:05,466 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\扫拖一体机器人100问.txt内容已经存在知识库中，跳过
+2026-04-06 11:23:05,467 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\故障排除.txt内容已经存在知识库中，跳过
+2026-04-06 11:23:05,467 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\维护保养.txt内容已经存在知识库中，跳过
+2026-04-06 11:23:05,467 - agent - INFO - vector_store.py:75 - [加载知识库]D:\黑马程序员AI大模型开发\AI大模型Rag与智能体开发_agent项目\data\选购指南.txt内容已经存在知识库中，跳过
