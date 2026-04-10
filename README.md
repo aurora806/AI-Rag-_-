@@ -42,33 +42,33 @@
 ├── app.py                  # Streamlit Web 端入口文件
 ├── requirements.txt        # 项目依赖包
 └── README.md               # 项目说明文档
-
+```
 ##🚀 快速开始
 1. 克隆项目
-Bash
+'''Bash
 git clone [https://github.com/你的用户名/你的仓库名.git](https://github.com/你的用户名/你的仓库名.git)
-cd 你的仓库名
+cd 你的仓库名'''
 
 2. 配置虚拟环境与依赖
-推荐使用 Python 3.9+
+3. 推荐使用 Python 3.9+
 
-Bash
-python -m venv venv
+'''Bash
+python -m venv venv'''
 # Windows 激活
-.\venv\Scripts\activate
+'''.\venv\Scripts\activate'''
 # Mac/Linux 激活
-source venv/bin/activate
+'''source venv/bin/activate'''
 
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 3. 配置环境变量
 在项目根目录创建 .env 文件，并填入你的大模型 API 密钥（请勿将此文件提交到版本库）：
 
-Code snippet
+'''Code snippet'''
 # 示例配置，请根据实际使用的模型填写
-LLM_API_KEY=your_api_key_here
+'''LLM_API_KEY=your_api_key_here'''
 4. 运行项目
-Bash
-streamlit run app.py
+'''Bash
+streamlit run app.py'''
 运行后，浏览器会自动打开网页，即可开始与“智扫通 Agent”进行交互！
 
 📝 学习总结
