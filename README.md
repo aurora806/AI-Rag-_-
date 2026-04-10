@@ -42,40 +42,50 @@
 ├── app.py                  # Streamlit Web 端入口文件
 ├── requirements.txt        # 项目依赖包
 └── README.md               # 项目说明文档
-```
-##🚀 快速开始
-1. 克隆项目
-'''Bash
+
+
+## 🚀 快速开始
+
+### 1. 获取项目代码
+将本项目克隆到本地，并进入项目根目录：
+```bash
 git clone [https://github.com/你的用户名/你的仓库名.git](https://github.com/你的用户名/你的仓库名.git)
-cd 你的仓库名'''
+cd 你的仓库名
 
-2. 配置虚拟环境与依赖
-3. 推荐使用 Python 3.9+
+### 2. 环境配置
+本项目推荐使用 Python 3.9+。为避免污染全局环境，强烈建议使用虚拟环境：
 
-'''Bash
-python -m venv venv'''
-# Windows 激活
-'''.\venv\Scripts\activate'''
-# Mac/Linux 激活
-'''source venv/bin/activate'''
+第一步：创建虚拟环境
+```bash
+python -m venv .venv
 
-'''pip install -r requirements.txt'''
-3. 配置环境变量
-在项目根目录创建 .env 文件，并填入你的大模型 API 密钥（请勿将此文件提交到版本库）：
+第二步：激活虚拟环境
+Windows 系统:
+```bash
+.venv\Scripts\activate
+macOS / Linux 系统:
+```bash
+source .venv/bin/activate
+第三步：安装依赖：
+```bash
+pip install -r requirements.txt
 
-'''Code snippet'''
-# 示例配置，请根据实际使用的模型填写
-'''LLM_API_KEY=your_api_key_here'''
-4. 运行项目
-'''Bash
-streamlit run app.py'''
-运行后，浏览器会自动打开网页，即可开始与“智扫通 Agent”进行交互！
+### 3. 配置环境变量
+智能体运行需要调用大模型服务。请在项目根目录下新建一个 .env 文件，并配置你的 API 密钥：
+# 大语言模型 API 密钥 (请替换为你实际使用的 Key)
+LLM_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
 
-📝 学习总结
-本项目作为 AI 大模型开发的实践项目，深入理解了：
+### 4. 启动服务
+确认环境与配置均已就绪后，启动 Streamlit Web 端服务：
+```bash
+streamlit run app.py
 
-LLM 如何通过外部工具弥补自身实时数据和复杂计算的局限性。
 
-Agent 与普通 Chain 的区别：从“写死路径在代码里”向“让 LLM 自主决定执行流程”的转变。
 
-RAG 系统的完整构建流程（Document Loader -> Text Splitter -> Embedding -> Vector Store -> Retriever）。
+
+
+
+
+
+
+
