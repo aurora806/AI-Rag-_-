@@ -76,7 +76,9 @@ pip install -r requirements.txt
 ### 3. 配置环境变量
 智能体运行需要调用大模型服务。请在项目根目录下新建一个 .env 文件，并配置你的 API 密钥：
 # 大语言模型 API 密钥 (请替换为你实际使用的 Key)
+```
 LLM_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+```
 
 ### 4. 启动服务
 确认环境与配置均已就绪后，启动 Streamlit Web 端服务：
