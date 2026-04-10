@@ -42,7 +42,7 @@
 ├── app.py                  # Streamlit Web 端入口文件
 ├── requirements.txt        # 项目依赖包
 └── README.md               # 项目说明文档
-
+'''
 
 ## 🚀 快速开始
 
@@ -51,24 +51,27 @@
 ```bash
 git clone [https://github.com/你的用户名/你的仓库名.git](https://github.com/你的用户名/你的仓库名.git)
 cd 你的仓库名
-
+'''
 ### 2. 环境配置
 本项目推荐使用 Python 3.9+。为避免污染全局环境，强烈建议使用虚拟环境：
 
 第一步：创建虚拟环境
 ```bash
 python -m venv .venv
-
+'''
 第二步：激活虚拟环境
 Windows 系统:
 ```bash
 .venv\Scripts\activate
+'''
 macOS / Linux 系统:
 ```bash
 source .venv/bin/activate
+'''
 第三步：安装依赖：
 ```bash
 pip install -r requirements.txt
+'''
 
 ### 3. 配置环境变量
 智能体运行需要调用大模型服务。请在项目根目录下新建一个 .env 文件，并配置你的 API 密钥：
@@ -79,6 +82,7 @@ LLM_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
 确认环境与配置均已就绪后，启动 Streamlit Web 端服务：
 ```bash
 streamlit run app.py
+'''
 
 
 
