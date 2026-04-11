@@ -85,6 +85,9 @@ LLM_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
 ```bash
 streamlit run app.py
 ```
+<img width="1945" height="1243" alt="image" src="https://github.com/user-attachments/assets/ee0bb4be-176b-4ba5-a1e0-62fa808163df" />
+附言：本项目是基于黑马程序员大模型RAG与Agent智能体项目实战教程，是Rag与Agent开发中的最基础的框架性项目
+
 
 
 
